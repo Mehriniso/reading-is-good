@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "b07ff935-8d46-493e-9d07-a6990ae8f553",
+		"name": "ReadingIsGood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add & Update New Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Test User\",\r\n    \"lastName\":\"Test User\",\r\n    \"phoneNumber\":312312312,\r\n    \"address\":\"address\",\r\n    \"email\":\"mail\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update & Save Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"bookId\": \"1c09a396-9530-48fb-9366-f935db23bcfd\",\r\n   \"name\":\"Harry Poter\",\r\n   \"author\": \"IK Rowling\",\r\n   \"quantity\": 17,\r\n   \"amount\":70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"customerId\": \"97cf4026-c0e1-4842-87ff-81ed40905158\",\r\n    \"orderData\": {\r\n      \"bookId\": \"9b0a291f-84f0-44da-bdd7-467afc90f679\",\r\n      \"quantity\":2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
